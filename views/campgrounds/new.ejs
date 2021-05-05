@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs') %> 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            <h1 class="text-center pb-3">Add in a New Campground</h1>
+            <form action="/campgrounds" method='POST'>
+                <div class='form-group'>
+                    <input class="form-control" type="text" placeholder="name" name="campground[name]">
+                </div>
+                <div class='form-group'>
+                    <input class="form-control" type="number" placeholder="price" name="campground[price]" min="0.01" step="0.01">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="image URL" name="campground[image]">
+                </div>
+                <div class='form-group'>
+                    <textarea name="campground[description]" class="form-control" cols="30" rows="10" placeholder="description"></textarea>
+                </div>
+                <div class='form-group'>
+                    <input class="btn btn-lg btn-outline-success btn-block " type="submit" value="Add campground!">
+                </div>
+                <a href="/campgrounds" class="m-auto">Go back</a>
+            </form>
+        </div>
+    </div>
+    
+
+</div>
+
+<%- include('../partials/footer.ejs') %> 
